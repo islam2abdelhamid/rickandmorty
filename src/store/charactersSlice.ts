@@ -36,9 +36,9 @@ const charactersSlice = createSlice({
           state.characters = action.payload;
         },
       )
-      .addCase(fetchCharacters.rejected, (state: CharacterState, action: PayloadAction<Error>) => {
+      .addCase(fetchCharacters.rejected, (state: CharacterState, action: any) => {
         state.status = 'failed';
-        state.error = action.payload.message;
+        state.error = action.error.message;
       });
   },
 });
