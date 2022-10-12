@@ -1,5 +1,5 @@
 import { Stack } from '@mui/material';
-import logo from '~/icons/logo.png';
+import logo from '~/icons/logo.svg';
 
 export const Header = () => {
   return (
