@@ -1,8 +1,14 @@
 import { apolloClient } from '~/graphql';
 import { gql } from '@apollo/client';
 const GET_CHARACTERS = gql`
-  query GetCharacters {
-    characters {
+  query GetCharacters($page: Int) {
+    characters(page: $page) {
+      info {
+        count
+        pages
+        next
+        prev
+      }
       results {
         id
         name
@@ -23,9 +29,12 @@ const GET_CHARACTERS = gql`
   }
 `;
 
-export const getCharacters = async () => {
+export const getCharacters = async (page: number) => {
   const data = await apolloClient.query({
     query: GET_CHARACTERS,
+    variables: {
+      page,
+    },
   });
   return data;
 };
