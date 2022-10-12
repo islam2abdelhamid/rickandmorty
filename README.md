@@ -1,7 +1,7 @@
 <h1 align='center'>Rick and Morty Characters App ⚡</h1>
 
 
-#### **App Demo: https://rick-and-morty-islam.netlify.app**
+#### **App Demo: https://rickandmorty-ll40uhv49-islam2abdelhamid.vercel.app**
 
 ![image](screenshot.png)
 
